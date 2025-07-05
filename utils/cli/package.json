@@ -1,0 +1,41 @@
+{
+  "name": "@repo/cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "type": "module",
+  "prettier": "@samislam/prettier-config",
+  "scripts": {
+    "start": "node ./dist/main.js",
+    "test": "jest",
+    "dev": "ts-node-dev",
+    "lint": "eslint . --ext .ts",
+    "clean": "del dist node_modules .turbo",
+    "format": "prettier --write ./{src,tests}/**/*.ts",
+    "build": "tspc -p tsconfig.build.json && cpx ./templates ./dist"
+  },
+  "keywords": [],
+  "author": "Islam Yamor",
+  "license": "ISC",
+  "dependencies": {
+    "@inquirer/prompts": "^7.6.0",
+    "@repo/typescript-config": "workspace:^",
+    "await-to-js": "^3.0.0",
+    "common-es": "^1.1.0",
+    "handlebars": "^4.7.8"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.30.1",
+    "@types/jest": "^30.0.0",
+    "cpx": "^1.5.0",
+    "eslint": "^9.30.1",
+    "jest": "^30.0.4",
+    "ts-jest": "^29.4.0",
+    "ts-node": "^10.9.2",
+    "ts-patch": "^3.3.0",
+    "typescript": "5.8.2",
+    "typescript-eslint": "^8.35.1",
+    "typescript-transform-paths": "^3.5.5"
+  }
+}

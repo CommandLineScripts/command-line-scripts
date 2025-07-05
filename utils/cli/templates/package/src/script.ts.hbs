@@ -1,0 +1,8 @@
+import { Executable } from 'cl-common'
+
+export class Name implements Executable {
+  packageExecutable: string
+  get command(): string
+
+  constructor(_opts: object) {}
+}
