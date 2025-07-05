@@ -1,6 +1,6 @@
 {
   "name": "@clscripts/cl-common",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Utilities for running and building clscripts scripts",
   "main": "./dist/index.js",
   "type": "commonjs",
