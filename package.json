@@ -10,12 +10,12 @@
     "create-package": "pnpm --filter @clscripts/cli start"
   },
   "devDependencies": {
-    "@samislam/prettier-config": "^1.1.7",
+    "@samislam/prettier-config": "1.1.7",
     "@types/node": "^24.0.10",
     "del-cli": "^6.0.0",
-    "prettier": "^3.0.3",
-    "prettier-plugin-jsdoc": "^1.3.3",
-    "prettier-plugin-tailwindcss": "^0.6.13",
+    "prettier": "3.0.3",
+    "prettier-plugin-jsdoc": "1.3.3",
+    "prettier-plugin-tailwindcss": "0.6.13",
     "turbo": "^2.5.4",
     "typescript": "5.8.2"
   },
