@@ -23,7 +23,7 @@ export class NewPackagePrompt {
 
   async makePackage() {
     this.monorepoRoot = path.resolve(__dirname, '../../../..')
-    this.templateRoot = path.join(__dirname, '../templates/package')
+    this.templateRoot = path.join(this.monorepoRoot, 'templates/package')
     this.targetDir = path.join(this.monorepoRoot, 'packages', this.packageName)
 
     const [errAccess] = await to(fs.access(this.targetDir))
