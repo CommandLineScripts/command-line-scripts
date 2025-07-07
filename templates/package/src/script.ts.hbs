@@ -6,7 +6,7 @@ export interface {{pascal packageName}}Opts {
 export class {{pascal packageName}} implements Executable {
   packageExecutable: string = "{{packageExecutable}}"
   get command(): string {
-    return [this.packageExecutable].filter(Boolean).join()
+    return [this.packageExecutable].filter(Boolean).join(' ')
   }
 
   constructor(opts: {{pascal packageName}}Opts) {}
