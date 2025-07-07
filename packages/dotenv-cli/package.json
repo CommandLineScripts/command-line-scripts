@@ -4,6 +4,9 @@
   "type": "commonjs",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "author": "Islam Yamor",
   "version": "8.0.0",
   "prettier": "@samislam/prettier-config",
