@@ -1,0 +1,40 @@
+{
+  "name": "@clscripts/del-cli",
+  "description": "del-cli clscripts implementation",
+  "type": "commonjs",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "author": "Islam Yamor",
+  "version": "6.0.0",
+  "prettier": "@samislam/prettier-config",
+  "keywords": [
+    "del-cli",
+    "cl-del cl-del-cli clscripts-del clscripts-del-cli"
+  ],
+  "scripts": {
+    "build": "tspc -p ./tsconfig.build.json && barrelsby --directory ./src --delete",
+    "lint": "eslint --ext .ts && tspc --noEmit -p ./tsconfig.build.json",
+    "format": "prettier --write ./{src,tests}/**/*.ts "
+  },
+  "files": [
+    "dist"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.30.1",
+    "@repo/typescript-config": "workspace:^",
+    "@types/jest": "^30.0.0",
+    "barrelsby": "^2.8.1",
+    "del-cli": "^6.0.0",
+    "eslint": "^9.30.1",
+    "jest": "^30.0.4",
+    "ts-jest": "^29.4.0",
+    "ts-node": "^10.9.2",
+    "ts-patch": "^3.3.0",
+    "typescript": "5.8.2",
+    "typescript-eslint": "^8.35.1"
+  },
+  "dependencies": {
+    "@clscripts/cl-common": "^1.0.4"
+  }
+}
