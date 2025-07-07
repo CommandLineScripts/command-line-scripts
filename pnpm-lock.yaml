@@ -33,7 +33,11 @@ importers:
         specifier: 5.8.2
         version: 5.8.2
 
-  packages/dotenv:
+  packages/dotenv-cli:
+    dependencies:
+      '@clscripts/cl-common':
+        specifier: ^1.0.4
+        version: 1.0.4
     devDependencies:
       '@eslint/js':
         specifier: ^9.30.1
@@ -119,6 +123,9 @@ importers:
       common-es:
         specifier: ^1.1.0
         version: 1.1.0
+      concat-str:
+        specifier: ^1.0.6
+        version: 1.0.6(typescript@5.8.2)
       handlebars:
         specifier: ^4.7.8
         version: 4.7.8
@@ -326,6 +333,9 @@ packages:
 
   '@bcoe/v8-coverage@0.2.3':
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
+
+  '@clscripts/cl-common@1.0.4':
+    resolution: {integrity: sha512-eh2Eb70U8cKccOZ8bGPFIqmrabFJPoYY9Wt01/XHCPhum9ojQjx/CLq0QM2RLVQwLxeP0eKtp2Ss7PF3IsaRHg==}
 
   '@cspotcode/source-map-support@0.8.1':
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
@@ -1103,6 +1113,11 @@ packages:
 
   concat-map@0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
+
+  concat-str@1.0.6:
+    resolution: {integrity: sha512-qgOHz5ogDs7eCJoeNG1U9a4lm0idorKn4SzFMXHB7OiVrpS2WyvYWSpAy4QFLVKwrL/PNNU9/n88pWcHk5SvpQ==}
+    peerDependencies:
+      typescript: ^5.7.2
 
   convert-source-map@2.0.0:
     resolution: {integrity: sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==}
@@ -2659,6 +2674,8 @@ snapshots:
 
   '@bcoe/v8-coverage@0.2.3': {}
 
+  '@clscripts/cl-common@1.0.4': {}
+
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
       '@jridgewell/trace-mapping': 0.3.9
@@ -3570,6 +3587,10 @@ snapshots:
       typescript: 4.9.5
 
   concat-map@0.0.1: {}
+
+  concat-str@1.0.6(typescript@5.8.2):
+    dependencies:
+      typescript: 5.8.2
 
   convert-source-map@2.0.0: {}
 

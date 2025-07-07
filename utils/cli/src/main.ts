@@ -1,5 +1,8 @@
 import { select } from '@inquirer/prompts'
 import { NewPackagePrompt } from './prompts/new-package.prompt.js'
+import { registerHandlebarUtils } from './utils/register-handlebar-utils.js'
+
+registerHandlebarUtils()
 
 type Action = 'NEW_PACKAGE'
 const action = await select<Action>({

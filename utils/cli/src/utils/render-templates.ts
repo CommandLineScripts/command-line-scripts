@@ -6,7 +6,7 @@ import { getAllFiles } from './get-all-files.js'
 export function renderAllTemplates(
   templateRoot: string,
   targetRoot: string,
-  context: Record<string, string | number>
+  context: Record<string, unknown>
 ) {
   const files = getAllFiles(templateRoot)
 
