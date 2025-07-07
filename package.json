@@ -2,6 +2,7 @@
   "name": "clscripts",
   "private": true,
   "license": "Apache-2.0",
+  "description": "Type-safe, composable classes to build and run CLI commands programmatically.",
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
