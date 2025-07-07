@@ -1,8 +1,13 @@
-import { Executable } from 'cl-common'
+import { Executable } from '@clscripts/cl-common'
 
-export class Name implements Executable {
-  packageExecutable: string
-  get command(): string
+export interface {{pascal packageName}}Opts {
+  // add your options here
+} 
+export class {{pascal packageName}} implements Executable {
+  packageExecutable: string = "{{packageExecutable}}"
+  get command(): string {
+    return [this.packageExecutable].filter(Boolean).join()
+  }
 
-  constructor(_opts: object) {}
+  constructor(opts: {{pascal packageName}}Opts) {}
 }
