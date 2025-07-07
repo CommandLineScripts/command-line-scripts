@@ -8,7 +8,7 @@
     "dist"
   ],
   "author": "Islam Yamor",
-  "version": "8.0.0",
+  "version": "8.0.1",
   "prettier": "@samislam/prettier-config",
   "keywords": [
     "dotenv",

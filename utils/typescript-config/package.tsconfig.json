@@ -9,7 +9,6 @@
     "module": "CommonJS",
     "skipLibCheck": true,
     "noImplicitAny": true,
-    "noEmitHelpers": true,
     "declarationMap": true,
     "noUnusedLocals": false,
     "esModuleInterop": true,
