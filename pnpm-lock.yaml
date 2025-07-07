@@ -635,6 +635,49 @@ importers:
         specifier: ^8.35.1
         version: 8.35.1(eslint@9.30.1)(typescript@5.8.2)
 
+  packages/tolgee-cli:
+    dependencies:
+      '@clscripts/cl-common':
+        specifier: ^1.0.4
+        version: 1.0.4
+    devDependencies:
+      '@eslint/js':
+        specifier: ^9.30.1
+        version: 9.30.1
+      '@repo/typescript-config':
+        specifier: workspace:^
+        version: link:../../utils/typescript-config
+      '@types/jest':
+        specifier: ^30.0.0
+        version: 30.0.0
+      barrelsby:
+        specifier: ^2.8.1
+        version: 2.8.1
+      del-cli:
+        specifier: ^6.0.0
+        version: 6.0.0
+      eslint:
+        specifier: ^9.30.1
+        version: 9.30.1
+      jest:
+        specifier: ^30.0.4
+        version: 30.0.4(@types/node@24.0.10)(ts-node@10.9.2(@types/node@24.0.10)(typescript@5.8.2))
+      ts-jest:
+        specifier: ^29.4.0
+        version: 29.4.0(@babel/core@7.28.0)(@jest/transform@30.0.4)(@jest/types@30.0.1)(babel-jest@30.0.4(@babel/core@7.28.0))(jest-util@30.0.2)(jest@30.0.4(@types/node@24.0.10)(ts-node@10.9.2(@types/node@24.0.10)(typescript@5.8.2)))(typescript@5.8.2)
+      ts-node:
+        specifier: ^10.9.2
+        version: 10.9.2(@types/node@24.0.10)(typescript@5.8.2)
+      ts-patch:
+        specifier: ^3.3.0
+        version: 3.3.0
+      typescript:
+        specifier: 5.8.2
+        version: 5.8.2
+      typescript-eslint:
+        specifier: ^8.35.1
+        version: 8.35.1(eslint@9.30.1)(typescript@5.8.2)
+
   utils/cl-common:
     devDependencies:
       '@eslint/js':
