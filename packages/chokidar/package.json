@@ -5,7 +5,7 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "author": "Islam Yamor",
-  "version": "4.0.3",
+  "version": "4.0.4",
   "prettier": "@samislam/prettier-config",
   "keywords": [
     "chokidar",
