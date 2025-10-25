@@ -11,9 +11,6 @@
     "clean": "turbo run clean && del \"./{node_modules,.turbo,pnpm-lock.yaml}\"",
     "create-package": "pnpm --filter @clscripts/cli start"
   },
-  "publishConfig": {
-    "access": "public"
-  },
   "devDependencies": {
     "@samislam/prettier-config": "1.1.7",
     "@types/node": "^24.0.10",
