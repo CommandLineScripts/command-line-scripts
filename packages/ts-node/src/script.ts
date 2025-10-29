@@ -18,6 +18,9 @@ export interface TsNodeOpts {
 
   /** Whether to skip type-checking for speed. */
   transpileOnly?: boolean
+
+  /** The -r option, to register */
+  register?: string[]
 }
 
 export class TsNode implements Executable {
@@ -26,7 +29,13 @@ export class TsNode implements Executable {
   constructor(private readonly opts: TsNodeOpts) {}
 
   get command(): string {
-    return [this.packageExecutable, this.projectPathArg, this.transpileOnlyArg, this.entryFileArg]
+    return [
+      this.packageExecutable,
+      this.projectPathArg,
+      this.transpileOnlyArg,
+      this.registerArg,
+      this.entryFileArg,
+    ]
       .filter(Boolean)
       .join(' ')
   }
@@ -39,5 +48,9 @@ export class TsNode implements Executable {
   }
   get entryFileArg() {
     return this.opts.entryFile
+  }
+
+  get registerArg() {
+    return this.opts.register ? `${this.opts.register.map((r) => `-r ${r}`)}` : ''
   }
 }

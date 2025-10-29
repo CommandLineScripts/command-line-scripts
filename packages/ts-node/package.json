@@ -5,7 +5,7 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "author": "Islam Yamor",
-  "version": "10.9.2",
+  "version": "10.9.3",
   "prettier": "@samislam/prettier-config",
   "keywords": [
     "ts-node",
