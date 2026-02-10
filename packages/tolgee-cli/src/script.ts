@@ -13,6 +13,7 @@ export class TolgeeCli implements Executable {
   constructor(opts: TolgeeCliOpts) {
     this.mode = opts.mode
     this.deleteUnused = opts.removeUnused
+    this.configPath = opts.configPath
   }
   get command() {
     return [this.packageExecutable, this.modeArg, this.deleteUnusedArg, this.configPathArg]
