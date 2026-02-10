@@ -15,7 +15,7 @@ export class TolgeeCli implements Executable {
     this.deleteUnused = opts.removeUnused
   }
   get command() {
-    return [this.packageExecutable, this.modeArg, this.deleteUnusedArg, this.configPath]
+    return [this.packageExecutable, this.modeArg, this.deleteUnusedArg, this.configPathArg]
       .filter(Boolean)
       .join(' ')
   }
