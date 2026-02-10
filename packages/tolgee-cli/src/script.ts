@@ -3,11 +3,13 @@ import { Executable } from '@clscripts/cl-common'
 export interface TolgeeCliOpts {
   mode: TolgeeRunMode
   removeUnused?: boolean
+  configPath?: boolean
 }
 export class TolgeeCli implements Executable {
   packageExecutable = 'tolgee'
   mode: TolgeeRunMode
   deleteUnused?: boolean
+  configPath?: boolean
   constructor(opts: TolgeeCliOpts) {
     this.mode = opts.mode
     this.deleteUnused = opts.removeUnused
@@ -20,6 +22,9 @@ export class TolgeeCli implements Executable {
   }
   get deleteUnusedArg() {
     return this.deleteUnused ? `--remove-unused` : ''
+  }
+  get configPathArg() {
+    return this.configPath ? `--config` : ''
   }
 }
 
