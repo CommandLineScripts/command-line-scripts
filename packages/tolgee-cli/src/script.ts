@@ -3,7 +3,7 @@ import { Executable } from '@clscripts/cl-common'
 export interface TolgeeCliOpts {
   mode: TolgeeRunMode
   removeUnused?: boolean
-  configPath?: boolean
+  configPath?: string
 }
 export class TolgeeCli implements Executable {
   packageExecutable = 'tolgee'
