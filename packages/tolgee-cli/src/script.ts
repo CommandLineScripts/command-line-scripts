@@ -9,7 +9,7 @@ export class TolgeeCli implements Executable {
   packageExecutable = 'tolgee'
   mode: TolgeeRunMode
   deleteUnused?: boolean
-  configPath?: boolean
+  configPath?: string
   constructor(opts: TolgeeCliOpts) {
     this.mode = opts.mode
     this.deleteUnused = opts.removeUnused
