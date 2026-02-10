@@ -5,7 +5,7 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "author": "Islam Yamor",
-  "version": "2.13.8",
+  "version": "2.13.9",
   "prettier": "@samislam/prettier-config",
   "keywords": [
     "tolgee",

@@ -27,7 +27,7 @@ export class TolgeeCli implements Executable {
     return this.deleteUnused ? `--remove-unused` : ''
   }
   get configPathArg() {
-    return this.configPath ? `--config` : ''
+    return this.configPath ? `--config ${this.configPath}` : ''
   }
 }
 
