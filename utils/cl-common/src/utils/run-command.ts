@@ -1,20 +1,28 @@
 import { spawn } from 'child_process'
 
 /**
- * Runs a given command in the shell asyncronously and directly prints the stdio as the parent
- * process
+ * Runs a command in a shell and streams stdio to parent.
  */
-export const runCommand = (command: string, printCommand = false) =>
+export const runCommand = (command: string, printCommand = false): Promise<true> =>
   new Promise((resolve, reject) => {
     if (printCommand) console.log(command)
-    const [cmd, ...args] = command.split(' ')
-    const process = spawn(cmd, args, { stdio: 'inherit', shell: true })
 
-    process.on('close', (code) => {
-      if (code === 0) {
-        resolve(true)
-      } else {
-        reject(new Error(`Command "${command}" failed with exit code ${code}`))
-      }
+    const child = spawn(command, {
+      stdio: 'inherit',
+      shell: true,
+    })
+
+    child.on('error', reject)
+
+    child.on('close', (code, signal) => {
+      if (code === 0) return resolve(true)
+      reject(
+        new Error(
+          `Command "${command}" failed with ${
+            code !== null ? `exit code ${code}` : `signal ${signal ?? 'unknown'}`
+          }`
+        )
+      )
     })
   })
+
