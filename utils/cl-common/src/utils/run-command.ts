@@ -1,28 +1,22 @@
-import { spawn } from 'child_process'
+import { spawnSync } from 'child_process'
 
-/**
- * Runs a command in a shell and streams stdio to parent.
- */
-export const runCommand = (command: string, printCommand = false): Promise<true> =>
-  new Promise((resolve, reject) => {
-    if (printCommand) console.log(command)
+/** Runs a command in a shell and streams stdio to parent. */
+export const runCommand = (command: string, printCommand = false): true => {
+  if (printCommand) console.log(command)
 
-    const child = spawn(command, {
-      stdio: 'inherit',
-      shell: true,
-    })
-
-    child.on('error', reject)
-
-    child.on('close', (code, signal) => {
-      if (code === 0) return resolve(true)
-      reject(
-        new Error(
-          `Command "${command}" failed with ${
-            code !== null ? `exit code ${code}` : `signal ${signal ?? 'unknown'}`
-          }`
-        )
-      )
-    })
+  const result = spawnSync(command, {
+    stdio: 'inherit',
+    shell: true,
+    env: process.env,
   })
 
+  if (result.error) {
+    throw result.error
+  }
+
+  if (result.status !== 0) {
+    process.exit(result.status ?? 1)
+  }
+
+  return true
+}
