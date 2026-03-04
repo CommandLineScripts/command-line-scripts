@@ -15,7 +15,10 @@ export const runCommand = (command: string, printCommand = false): true => {
   }
 
   if (result.status !== 0) {
-    process.exit(result.status ?? 1)
+    if (result.signal) {
+      throw new Error(`Command "${command}" terminated by signal ${result.signal}`)
+    }
+    throw new Error(`Command "${command}" failed with exit code ${result.status ?? 1}`)
   }
 
   return true
