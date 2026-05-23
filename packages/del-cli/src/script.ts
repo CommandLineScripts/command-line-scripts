@@ -13,6 +13,6 @@ export class DelCli implements Executable {
     return [this.packageExecutable, this.filesArg].filter(Boolean).join(' ')
   }
   get filesArg() {
-    return this.files
+    return this.files.join(' ')
   }
 }

@@ -5,7 +5,7 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "author": "Islam Yamor",
-  "version": "6.0.0",
+  "version": "7.0.0",
   "prettier": "@samislam/prettier-config",
   "keywords": [
     "del-cli",
