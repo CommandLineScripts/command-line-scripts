@@ -6,7 +6,7 @@
   "types": "./dist/index.d.ts",
   "author": "Islam Yamor",
   "version": "54.0.20",
-  "prettier": "@samislam/prettier-config",
+  
   "keywords": [
     "expo",
     "clscripts-expo",

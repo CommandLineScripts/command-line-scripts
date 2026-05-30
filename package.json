@@ -12,16 +12,16 @@
     "create-package": "pnpm --filter @clscripts/cli start"
   },
   "devDependencies": {
-    "@samislam/prettier-config": "1.1.7",
+    "@homer0/prettier-plugin-jsdoc": "^12.0.0",
     "@types/node": "^24.0.10",
     "del-cli": "^6.0.0",
-    "prettier": "3.0.3",
+    "prettier": "3.7.3",
     "prettier-plugin-jsdoc": "1.3.3",
     "prettier-plugin-tailwindcss": "0.6.13",
     "turbo": "^2.5.4",
     "typescript": "5.8.2"
   },
-  "packageManager": "pnpm@10.19.0",
+  "packageManager": "pnpm@11.5.0+sha512.dbfcc4f81cf48597afd4bc391ffdf12c11f1a9fb83a395bfa6b0a2d9cc2fd8ffebafdb1ccbd529632153f793904c2615b7f09fe1a345473fd1c35845172a8eb1",
   "engines": {
     "node": ">=18"
   }

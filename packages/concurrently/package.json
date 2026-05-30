@@ -6,7 +6,7 @@
   "types": "./dist/index.d.ts",
   "author": "Islam Yamor",
   "version": "9.2.0",
-  "prettier": "@samislam/prettier-config",
+  
   "keywords": [
     "concurrently",
     "concurrently-cli",

@@ -3,5 +3,8 @@ packages:
   - packages/*
   - utils/*
 
+allowBuilds:
+  unrs-resolver: true
+
 onlyBuiltDependencies:
   - unrs-resolver

@@ -5,7 +5,7 @@
   "main": "index.js",
   "private": true,
   "type": "module",
-  "prettier": "@samislam/prettier-config",
+  
   "scripts": {
     "start": "node ./dist/main.js",
     "test": "jest",
