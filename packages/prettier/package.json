@@ -5,8 +5,7 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "author": "Islam Yamor",
-  "version": "3.6.2",
-  
+  "version": "3.7.0",
   "keywords": [
     "prettier",
     "prettier-cli",
