@@ -5,7 +5,6 @@
   "private": true,
   "license": "ISC",
   "author": "Islam Yamor",
-  
   "scripts": {
     "format": "prettier --write *.json"
   }
